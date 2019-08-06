@@ -1,0 +1,22 @@
+<div>
+    <form #filepath="ngForm">
+      <input type="text" name="searchKeyword" placeholder="Enter The FilePath And tHEN Submit" [(ngModel)]="searchKeyword" />
+      <button type="submit" (click)="getMovie(searchKeyword)">submit</button>
+    </form>
+  </div>
+  <table class="table table-striped">
+        <thead class="thead-dark">
+          <th>Sn</th>
+          <th>list of files </th>
+      </thead>
+      <tbody>
+
+          <tr
+          *ngFor="let x of allFileList let i = index">
+            <td>{{i}}</td>
+          <td>{{x}}</td>
+
+        </tr>
+          
+      </tbody>
+  </table>

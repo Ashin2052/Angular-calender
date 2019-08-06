@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.app-top {
+margin: auto  }
+  
+  .app-calendar {
+    margin: auto;
+    max-width: 900px;
+    max-height: inherit;
+  }
+  
+  
+
+body {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+  }
+  
+  /* // you must include each plugins' css
+  // paths prefixed with ~ signify node_modules */
+ 
+  

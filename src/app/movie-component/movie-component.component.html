@@ -1,0 +1,36 @@
+<button [routerLink]="['/files']" style="background-color:red;size: 0vmax;color: seashell">ToSearchFileList</button>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <!-- <input type="button" value="EmpLeaveList" onclick="window.location.href = 'http://localhost:4200/admin';" /> -->
+    </tr>
+
+    <tr>
+      <th>Sn</th>
+      <th>showId</th>
+      <th>Movie Name</th>
+      <th>Theatre Name</th>
+      <th>Audotoriam</th>
+      <th>showTime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      class="item"
+      *ngFor="
+        let movies of movieList | paginate: { itemsPerPage: 15, currentPage: p };
+        let i = index"
+    >
+    <td>{{ i }}</td>
+    <td>{{ movies.ShowId }}</td>
+      <td>{{ movies.Movie.MovieName }}</td>
+      <td>{{ movies.Theatre.TheatreName }}</td>
+      <td>{{ movies.Auditorium.AuditoriumName }}</td>
+      <td>{{ movies.ShowDateTime }}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+<!-- <app-get-files [EveryFile]="allFileList"></app-get-files> -->
